@@ -1,0 +1,101 @@
+rating,confidence,score,value_bin
+very low impact,L,35,5
+very low impact,L,28,4
+very low impact,L,20,3
+very low impact,L,12,2
+very low impact,L,5,1
+low impact,L,25,5
+low impact,L,35,4
+low impact,L,27,3
+low impact,L,12,2
+low impact,L,1,1
+medium impact,L,6.5,5
+medium impact,L,26,4
+medium impact,L,35,3
+medium impact,L,26,2
+medium impact,L,6.5,1
+high impact,L,1,5
+high impact,L,12,4
+high impact,L,27,3
+high impact,L,35,2
+high impact,L,25,1
+very high impact,L,5,5
+very high impact,L,12,4
+very high impact,L,20,3
+very high impact,L,28,2
+very high impact,L,35,1
+very low impact,M,50,5
+very low impact,M,35,4
+very low impact,M,12,3
+very low impact,M,2,2
+very low impact,M,1,1
+low impact,M,7,5
+low impact,M,50,4
+low impact,M,37,3
+low impact,M,5,2
+low impact,M,1,1
+medium impact,M,1,5
+medium impact,M,24,4
+medium impact,M,50,3
+medium impact,M,24,2
+medium impact,M,1,1
+high impact,M,1,5
+high impact,M,5,4
+high impact,M,37,3
+high impact,M,50,2
+high impact,M,7,1
+very high impact,M,1,5
+very high impact,M,2,4
+very high impact,M,12,3
+very high impact,M,35,2
+very high impact,M,50,1
+very low impact,H,80,5
+very low impact,H,20,4
+very low impact,H,0,3
+very low impact,H,0,2
+very low impact,H,0,1
+low impact,H,14,5
+low impact,H,80,4
+low impact,H,6,3
+low impact,H,0,2
+low impact,H,0,1
+medium impact,H,0,5
+medium impact,H,10,4
+medium impact,H,80,3
+medium impact,H,10,2
+medium impact,H,0,1
+high impact,H,0,5
+high impact,H,0,4
+high impact,H,6,3
+high impact,H,80,2
+high impact,H,14,1
+very high impact,H,0,5
+very high impact,H,0,4
+very high impact,H,0,3
+very high impact,H,20,2
+very high impact,H,80,1
+very low impact,VH,90,5
+very low impact,VH,10,4
+very low impact,VH,0,3
+very low impact,VH,0,2
+very low impact,VH,0,1
+low impact,VH,6,5
+low impact,VH,90,4
+low impact,VH,4,3
+low impact,VH,0,2
+low impact,VH,0,1
+medium impact,VH,0,5
+medium impact,VH,5,4
+medium impact,VH,90,3
+medium impact,VH,5,2
+medium impact,VH,0,1
+high impact,VH,0,5
+high impact,VH,0,4
+high impact,VH,5,3
+high impact,VH,90,2
+high impact,VH,5,1
+very high impact,VH,0,5
+very high impact,VH,0,4
+very high impact,VH,0,3
+very high impact,VH,10,2
+very high impact,VH,90,1
