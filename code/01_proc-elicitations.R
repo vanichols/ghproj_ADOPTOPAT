@@ -115,7 +115,7 @@ c1 %>%
   ggplot(aes(value_bin, reorder(title, weight))) + 
   geom_rect(aes(xmin = 0.5, xmax = 5.5, ymin = 6.5, ymax = 7.5), fill = "white") +
   geom_point(aes(fill = value_binF, size = score*10, alpha = mini_facet), show.legend = F, pch = 21, stroke = 1.2) + 
-  scale_size(range = c(0, 7)) +
+  scale_size(range = c(0, 9)) +
   scale_fill_manual(values = c(cv1, cv2, cv3, cv4, cv5)) +
   scale_alpha_manual(values = c(1, 0.15)) +
   scale_x_continuous(
@@ -134,25 +134,57 @@ c1 %>%
         panel.grid.major.y = element_line(color = "gray"),
         axis.text.x = element_text(angle = 45, hjust = 1))
 
+ggsave("figs/ANT-compost-lettuce-dots.png", height = 7.8, width = 6)
 
 # bar plot ----------------------------------------------------------------
 
-
-c1 %>% 
-  arrange(scenario, weight) %>% 
+p1 <- 
+  c1 %>% 
+  filter(title != "All categories combined (100%)") %>% 
+  arrange(scenario, -weight) %>% 
   mutate(value_binF = as.factor(value_bin),
-         impact_categoryF = fct_inorder(impact_category),
-         titleF = fct_inorder(title)) %>% 
+         impact_category = str_to_sentence(impact_category),
+         titleF = fct_inorder(title),
+         scenarioF = factor(scenario, levels = c("CCP", "ADOPT"))) %>% 
   ggplot(aes(value_bin, score/100)) + 
-  geom_col(aes(fill = value_binF), size = 2, color = "black", show.legend = F) + 
+  geom_col(aes(fill = value_binF), size = 1.5, color = "black", show.legend = F) + 
   scale_fill_manual(values = c(cv1, cv2, cv3, cv4, cv5)) + 
   scale_y_continuous(labels = label_percent()) +
   scale_x_continuous(
     breaks = c(1, 2, 3, 4, 5),
     labels = c("Very low value", "Low value", "Medium value", "Highly valuable", "Very highly valuable")) +
   labs(x = NULL,
-       y = "Probability") +
+       y = NULL) +
   th1 + 
-  facet_grid(scenario~ mini_facet + impact_categoryF)
+  facet_grid(titleF ~ scenarioF, labeller = label_wrap_gen(), switch = "y")
 
 
+p2 <- 
+  c1 %>% 
+  filter(title == "All categories combined (100%)") %>% 
+  arrange(scenario, -weight) %>% 
+  mutate(value_binF = as.factor(value_bin),
+         impact_category = str_to_sentence(impact_category),
+         titleF = fct_inorder(title),
+         scenarioF = factor(scenario, levels = c("CCP", "ADOPT"))) %>% 
+  ggplot(aes(value_bin, score/100)) + 
+  geom_col(aes(fill = value_binF), size = 1.5, color = "black", show.legend = F) + 
+  scale_fill_manual(values = c(cv1, cv2, cv3, cv4, cv5)) + 
+  scale_y_continuous(labels = label_percent()) +
+  scale_x_continuous(
+    breaks = c(1, 2, 3, 4, 5),
+    labels = c("Very low value", "Low value", "Medium value", "Highly valuable", "Very highly valuable")) +
+  labs(x = NULL,
+       y = NULL) +
+  th1 + 
+  facet_grid(titleF ~ scenarioF, labeller = label_wrap_gen(width = 20), switch = "y")
+
+layout <- "
+AA##
+AABB
+AA##"
+
+
+p1 + p2 + plot_layout(design = layout)
+
+ggsave("figs/ANT-compost-lettuce-bars.png", width = 7.8, height = 6)
