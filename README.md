@@ -1,2 +1,2 @@
 # ghproj_ADOPTOPAT
-The beginnings of an Opensource Performance Assessment Tool for the ADOPT-IPM project
+The beginnings of an Opensource Performance Assessment Tool (OPAT) for the ADOPT-IPM project
