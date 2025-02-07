@@ -1,0 +1,36 @@
+weight,title,impact_category,rating,confidence,score,value_bin
+16,Maintaining crop value,losses,low impact,VH,6,5
+16,Maintaining crop value,losses,low impact,VH,90,4
+16,Maintaining crop value,losses,low impact,VH,4,3
+16,Maintaining crop value,losses,low impact,VH,0,2
+16,Maintaining crop value,losses,low impact,VH,0,1
+16,Reducing health and safety risks,health and safety,very low impact,VH,90,5
+16,Reducing health and safety risks,health and safety,very low impact,VH,10,4
+16,Reducing health and safety risks,health and safety,very low impact,VH,0,3
+16,Reducing health and safety risks,health and safety,very low impact,VH,0,2
+16,Reducing health and safety risks,health and safety,very low impact,VH,0,1
+17,Minimizing direct costs,direct costs,very low impact,VH,90,5
+17,Minimizing direct costs,direct costs,very low impact,VH,10,4
+17,Minimizing direct costs,direct costs,very low impact,VH,0,3
+17,Minimizing direct costs,direct costs,very low impact,VH,0,2
+17,Minimizing direct costs,direct costs,very low impact,VH,0,1
+17,Minimizing environmental impacts,environment,very low impact,H,80,5
+17,Minimizing environmental impacts,environment,very low impact,H,20,4
+17,Minimizing environmental impacts,environment,very low impact,H,0,3
+17,Minimizing environmental impacts,environment,very low impact,H,0,2
+17,Minimizing environmental impacts,environment,very low impact,H,0,1
+17,Minimizing time and management demands,time and management,low impact,M,7,5
+17,Minimizing time and management demands,time and management,low impact,M,50,4
+17,Minimizing time and management demands,time and management,low impact,M,37,3
+17,Minimizing time and management demands,time and management,low impact,M,5,2
+17,Minimizing time and management demands,time and management,low impact,M,1,1
+17,Immediate usability,coordination requirements,medium impact,L,6.5,5
+17,Immediate usability,coordination requirements,medium impact,L,26,4
+17,Immediate usability,coordination requirements,medium impact,L,35,3
+17,Immediate usability,coordination requirements,medium impact,L,26,2
+17,Immediate usability,coordination requirements,medium impact,L,6.5,1
+100,All categories combined,total,NA,-,1.277,1
+100,All categories combined,total,NA,-,5.2693,2
+100,All categories combined,total,NA,-,12.8574,3
+100,All categories combined,total,NA,-,34.0423,4
+100,All categories combined,total,NA,-,46.554,5
