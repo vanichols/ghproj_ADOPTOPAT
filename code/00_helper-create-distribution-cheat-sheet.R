@@ -31,6 +31,19 @@ d.beta <-
   rename(score = value) %>% 
   select(-name)
 
+d.beta
+library(ipmopat)
+library(tidyverse)
+
+
+#--check it
+d.beta %>% 
+  mutate(ratingF = fct_inorder(rating),
+         confidenceF = fct_inorder(confidence)) %>% 
+  ggplot(aes(value_bin, score)) + 
+  geom_col() + 
+  facet_grid(ratingF ~confidenceF)
+
 
 d.beta %>% 
   write_csv("data/td_distribution-cheat-sheet.csv")
@@ -202,13 +215,13 @@ tst %>%
 
 # get 90% in 2 rating (second to left) -------------------------------------------------------
 
-tst <- tibble(x = rbeta(10000, 15, 35))
-
-
-tst %>% 
-  mutate(bin = cut(x, breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1))) %>% 
-  group_by(bin) %>% 
-  summarise(nu = n()/10000)
+# tst <- tibble(x = rbeta(10000, 15, 35))
+# 
+# 
+# tst %>% 
+#   mutate(bin = cut(x, breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1))) %>% 
+#   group_by(bin) %>% 
+#   summarise(nu = n()/10000)
 
 
 tst %>% 

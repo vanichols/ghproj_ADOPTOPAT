@@ -7,6 +7,8 @@ rm(list = ls())
 
 library(tidyverse)
 library(readxl)
+library(scales)
+library(patchwork)
 
 source("code/00_fxns.R")
 source("code/00_color-palettes.R")
@@ -86,7 +88,7 @@ c1 %>%
   geom_rect(aes(xmin = 0.5, xmax = 5.5, ymin = 6.5, ymax = 7.5), fill = "white") +
   geom_point(aes(fill = value_binF, size = score*10, alpha = mini_facet), show.legend = F, pch = 21, stroke = 1.2) + 
   scale_size(range = c(0, 7)) +
-  scale_fill_manual(values = c(cv1, cv2, cv3, cv4, cv5)) +
+  scale_fill_manual(values = c(av1, av2, av3, av4, av5)) +
   scale_alpha_manual(values = c(1, 0.15)) +
   scale_x_continuous(
     expand = c(0,0),
@@ -116,7 +118,7 @@ c1 %>%
   geom_rect(aes(xmin = 0.5, xmax = 5.5, ymin = 6.5, ymax = 7.5), fill = "white") +
   geom_point(aes(fill = value_binF, size = score*10, alpha = mini_facet), show.legend = F, pch = 21, stroke = 1.2) + 
   scale_size(range = c(0, 9)) +
-  scale_fill_manual(values = c(cv1, cv2, cv3, cv4, cv5)) +
+  scale_fill_manual(values = c(av1, av2, av3, av4, av5)) +
   scale_alpha_manual(values = c(1, 0.15)) +
   scale_x_continuous(
     expand = c(0,0),
@@ -148,7 +150,7 @@ p1 <-
          scenarioF = factor(scenario, levels = c("CCP", "ADOPT"))) %>% 
   ggplot(aes(value_bin, score/100)) + 
   geom_col(aes(fill = value_binF), size = 1.5, color = "black", show.legend = F) + 
-  scale_fill_manual(values = c(cv1, cv2, cv3, cv4, cv5)) + 
+  scale_fill_manual(values = c(av1, av2, av3, av4, av5)) + 
   scale_y_continuous(labels = label_percent()) +
   scale_x_continuous(
     breaks = c(1, 2, 3, 4, 5),
@@ -169,7 +171,7 @@ p2 <-
          scenarioF = factor(scenario, levels = c("CCP", "ADOPT"))) %>% 
   ggplot(aes(value_bin, score/100)) + 
   geom_col(aes(fill = value_binF), size = 1.5, color = "black", show.legend = F) + 
-  scale_fill_manual(values = c(cv1, cv2, cv3, cv4, cv5)) + 
+  scale_fill_manual(values = c(av1, av2, av3, av4, av5)) + 
   scale_y_continuous(labels = label_percent()) +
   scale_x_continuous(
     breaks = c(1, 2, 3, 4, 5),
